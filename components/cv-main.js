@@ -6,21 +6,21 @@ export class CVMain extends HTMLElement {
     this.outerHTML = /*html*/`
       <div class="min-h-screen w-full flex items-center justify-center bg-gray-100 p-16 overflow-hidden">
         <div class="bg-white a4 shadow-xl overflow-auto">
-          <div>
-            <div>
+          <div class="flex gap-2">
+            <div class="flex flex-col gap-2 grow">
               <div>James Fraser-Jones</div>
               <div>Full-Stack Software Engineer</div>
               <div>London, UK</div>
             </div>
-            <div>
+            <div class="flex flex-col gap-2">
               <div><a href="mailto:james@fraser-jones.co.uk"><i class="fa-solid fa-envelope"></i> james@fraser-jones.co.uk</a></div>
               <div><a href="tel:+447940350499"><i class="fa-solid fa-phone"></i> +44 7940 350 499</a></div>
               <div><a href="https://linkedin.com/in/james-fraser-jones"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/james-fraser-jones</a></div>
               <div><a href="https://github.com/James-Fraser-Jones"><i class="fa-brands fa-github"></i> github.com/James-Fraser-Jones</a></div>
             </div>
-            <div>TS/JS • React • Node • ASP.NET • SQL • Python • Angular • AWS • Git • Linux • C/C++</div>
           </div>
-          <div>
+          <div class="text-last-justify">TS/JS • React • Node • ASP.NET • SQL • Python • Angular • AWS • Git • Linux • C/C++</div>
+          <cv-section>
             <div><i class="fa-solid fa-suitcase"></i> Experience</div>
             <div>
               <cv-experience-section>
@@ -76,44 +76,35 @@ export class CVMain extends HTMLElement {
                 </cv-list>
               </cv-experience-section>
             </div>
-          </div>
-          <div>
+          </cv-section>
+          <cv-section>
             <div><i class="fa-solid fa-mortar-board"></i> Education</div>
-            <div>
-              <div>
-                <div>
-                  <div><a href="https://bristol.ac.uk/">University of Bristol</a></div>
-                  <div>2014 - 2018</div>
-                </div>
-                <div>
-                  <div>BSc Computer Science</div>
-                  <div>Haskell Lambda-Cube Interpreter</div>
-                  <div>Functional Programming, Type Theory</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div><a href="https://cadcol.ac.uk/">Cadbury College</a></div>
-                  <div>2012 - 2014</div>
-                </div>
-                <div>
-                  <div>A Levels</div>
-                  <div>Maths, Further Maths</div>
-                  <div>Physics, Computing AS</div>
-                </div>
-              </div>
+            <div class="flex gap-2">
+              <cv-education-section>
+                <div><a href="https://bristol.ac.uk/">University of Bristol</a></div>
+                <div>2014 - 2018</div>
+                <div>BSc Computer Science</div>
+                <div>Haskell Lambda-Cube Interpreter<br/>Functional Programming, Type Theory</div>
+              </cv-education-section>
+              <div class="w-px bg-black"></div>
+              <cv-education-section>
+                <div><a href="https://cadcol.ac.uk/">Cadbury College</a></div>
+                <div>2012 - 2014</div>
+                <div>A Levels</div>
+                <div>Maths, Further Maths<br/>Physics, Computing AS</div>
+              </cv-education-section>
             </div>
-          </div>
-          <div>
+          </cv-section>
+          <cv-section>
             <div><i class="fa-solid fa-laptop"></i> Projects</div>
             <div>
-              <div>
+              <div class="flex flex-col gap-2">
                 <div><a href="https://www.fraser-jones.co.uk/projects/circuit">Circuit</a></div>
                 <div>A fully-fledged parser, and call-by-name evaluator, for <a href="https://en.wikipedia.org/wiki/Lambda_calculus">Lambda Calculus</a></br>Uses a novel method to generate circuit-like diagrams that clarify the binding structure of lambda terms</div>
                 <div>Typescript • React • Node • AWS • Haskell • Stack <a href="https://github.com/James-Fraser-Jones/circuit"><i class="fa-brands fa-github"></i></a></div>
               </div>
             </div>
-          </div>
+          </cv-section>
         </div>
       </div>
     `;

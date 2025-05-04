@@ -25,3 +25,6 @@ a {
   text-decoration-thickness: 1px;
   text-decoration-color: #0000EE;
 }
+.text-last-justify {
+  text-align-last: justify;
+}
