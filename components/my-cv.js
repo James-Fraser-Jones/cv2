@@ -1,6 +1,6 @@
 const innerHTML = /*html*/`
-  <div class="w-screen flex items-center justify-center bg-gray-100 p-16">
-    <div class="bg-white a4 shadow-xl">
+  <div class="min-h-screen w-full flex items-center justify-center bg-gray-100 p-16 overflow-hidden">
+    <div class="bg-white a4 shadow-xl overflow-auto">
       <div>
         <div>
           <div>James Fraser-Jones</div>
@@ -103,8 +103,8 @@ const innerHTML = /*html*/`
         <div><i class="fa-solid fa-laptop"></i> Projects</div>
         <div>
           <div>
-            <div><a href="https://www.fraser-jones.co.uk/projects/circuit"></a>Circuit</div>
-            <div>A fully-fledged parser, and call-by-name evaluator, for<a href="https://en.wikipedia.org/wiki/Lambda_calculus">Lambda Calculus</a></br>Uses a novel method to generate circuit-like diagrams that clarify the binding structure of lambda terms</div>
+            <div><a href="https://www.fraser-jones.co.uk/projects/circuit">Circuit</a></div>
+            <div>A fully-fledged parser, and call-by-name evaluator, for <a href="https://en.wikipedia.org/wiki/Lambda_calculus">Lambda Calculus</a></br>Uses a novel method to generate circuit-like diagrams that clarify the binding structure of lambda terms</div>
             <div>Typescript • React • Node • AWS • Haskell • Stack <a href="https://github.com/James-Fraser-Jones/circuit"><i class="fa-brands fa-github"></i></a></div>
           </div>
         </div>
