@@ -1,9 +1,9 @@
-const highlightTemplateHTML = `
+const highlightTemplateHTML = /*html */`
   <style>
     /* Optional component-specific styles */
   </style>
   <span class="highlight-wrapper text-2xl">
-      <div class="highlight-content"></div>
+    <div class="highlight-content"></div>
   </span>
 `;
 
