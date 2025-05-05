@@ -23,20 +23,20 @@ defineMacro('cv-experience-section', (children) => /*html*/`
   <div class="flex gap-2">
     ${children[1]}
     <div class="flex flex-col gap-2">
-      ${children[0]}
+      <div class="font-semibold">${children[0]}</div>
       ${children[2]}
     </div>
   </div>
 `);
 
 defineMacro('cv-education-section', (children) => /*html*/`
-  <div class="flex gap-2">
-    <div class="flex flex-col gap-2">
+  <div class="flex gap-3 items-center">
+    <div class="flex flex-col gap-1 items-center">
       ${children[0]}
       ${children[1]}
     </div>
-    <div class="flex flex-col gap-2">
-      ${children[2]}
+    <div class="flex flex-col">
+      <div class="font-semibold">${children[2]}</div>
       ${children[3]}
     </div>
   </div>
