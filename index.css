@@ -6,6 +6,7 @@ tailwindcss -i index.css -o tailwind/out.css --watch
 @theme {
   --font-sans: "Inter Tight", sans-serif;
   --font-monospace: "Source Code Pro", monospace;
+  --color-brand: #78dcca;
 }
 html {
   font-size: 11pt;
@@ -20,6 +21,9 @@ html {
 }
 a {
   color: #0000EE;
+}
+a:visited {
+  color: #551A8B;
 }
 .text-last-justify {
   text-align-last: justify;

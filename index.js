@@ -12,9 +12,14 @@ function defineMacro(tagName, templateFn) {
 }
 
 defineMacro('cv-section', (children) => /*html*/`
-  <div class="flex flex-col gap-2">
-    <div class="small-caps">${children[0]}</div>
-    <div class="h-px bg-black"></div>
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center">
+      <div class="h-px bg-black w-[5px]"></div>
+      <!-- <div class="small-caps text-xl tracking-wider">${children[1]}</div>
+      <div class="h-px bg-black w-[5px]"></div> -->
+      <div class="small-caps text-xl tracking-wider text-brand">${children[0]}</div>
+      <div class="h-px bg-black grow"></div>
+    </div>
     ${children.slice(1).join('')}
   </div>
 `);
@@ -22,9 +27,9 @@ defineMacro('cv-section', (children) => /*html*/`
 defineMacro('cv-experience-section', (children) => /*html*/`
   <div class="flex gap-2">
     ${children[1]}
-    <div class="flex flex-col gap-2">
-      <div class="font-semibold">${children[0]}</div>
-      ${children[2]}
+    <div class="flex flex-col gap-1">
+      ${children[0]}
+      <div class="ml-2">${children[2]}</div>
     </div>
   </div>
 `);
@@ -43,17 +48,15 @@ defineMacro('cv-education-section', (children) => /*html*/`
 `);
 
 defineMacro('cv-timeline', (children) => /*html*/`
-  <div class="h-[150px] flex flex-col gap-2 items-center w-fit text-center">
+  <div class="flex flex-col items-center w-[70px] shrink-0 text-center">
     ${children[0]}
-    <div class="grow w-px bg-black"></div>
+    <div class="grow w-px bg-black min-h-[1em]"></div>
     ${children[1]}
-    <div class="grow w-px bg-black"></div>
-    ${children[2]}
   </div>
 `);
 
 defineMacro('cv-list', (children) => /*html*/`
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col">
     ${
       children.map((child) => /*html*/`
         <div class="flex gap-2 items-baseline">
